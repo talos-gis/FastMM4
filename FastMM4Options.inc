@@ -153,7 +153,7 @@ Set the default options for FastMM here.
 
   {Deletes the error log file on startup. No effect if LogErrorsToFile is not
    also set.}
-  {.$define ClearLogFileOnStartup}
+  {$define ClearLogFileOnStartup}
 
   {Loads the FASTMM_FullDebugMode.dll dynamically. If the DLL cannot be found
    then stack traces will not be available. Note that this may cause problems
@@ -335,15 +335,15 @@ Set the default options for FastMM here.
 {Group the options you use for release and debug versions below}
 {$ifdef Release}
   {Specify the options you use for release versions below}
-  {.$undef FullDebugMode}
+  {$undef FullDebugMode}
   {.$undef CheckHeapForCorruption}
   {.$define ASMVersion}
-  {.$undef EnableMemoryLeakReporting}
+  {$undef EnableMemoryLeakReporting}
   {.$undef UseOutputDebugString}
 {$else}
   {Specify the options you use for debugging below}
-  {.$define FullDebugMode}
-  {.$define EnableMemoryLeakReporting}
+  {$define FullDebugMode}
+  {$define EnableMemoryLeakReporting}
   {.$define UseOutputDebugString}
 {$endif}
 
